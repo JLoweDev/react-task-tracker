@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
-const Button = ({ text, color }) => {
-    return <button className='btn' style={{ backgroundColor: color }}>{text}</button>
+const Button = ({ text, color, onClick }) => {
+    return <button onClick={onClick} className='btn' style={{ backgroundColor: color }}>{text}</button>
 }
 
 // Adds default props incase text and color aren't passed in
@@ -12,8 +12,9 @@ Button.defaultProps = {
 
 // Causes both props to expect a string
 Button.propTypes = {
-    text: PropTypes.string.isRequired,
-    color: PropTypes.string.isRequired,
+    text: PropTypes.string,
+    color: PropTypes.string,
+    onClick: PropTypes.func,
 }
 
 export default Button
