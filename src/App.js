@@ -24,10 +24,15 @@ function App() {
     },
   ])
 
+  // Delete Task
+  const deleteTask = (id) => {
+    console.log('pork', id);
+  }
+
   return (
     <div className="container">
       <Header title='React Task Tracker' />
-      <Tasks tasks={tasks}/>
+      <Tasks tasks={tasks} onDelete={deleteTask}/>
     </div>
   );
 }
