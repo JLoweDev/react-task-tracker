@@ -10,7 +10,7 @@
       "id": 3,
       "text": "Walk Gorilla",
       "day": "Feb 8th at 12:45am",
-      "reminder": false
+      "reminder": true
     },
     {
       "text": "Puffin Time ",
