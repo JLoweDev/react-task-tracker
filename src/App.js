@@ -24,6 +24,11 @@ function App() {
     },
   ])
 
+  // Toggle Reminder
+  const toggleReminder = (id) => {
+    console.log('pork', id);
+  }
+
   // Delete Task
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id))
@@ -32,7 +37,7 @@ function App() {
   return (
     <div className="container">
       <Header title='React Task Tracker' />
-      {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} /> : ''}
+      {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> : 'No Tasks'}
     </div>
   );
 }
